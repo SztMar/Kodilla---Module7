@@ -6,6 +6,8 @@ class Car():
        self.top_speed = top_speed
        self.color = color
 
+       print(self.make, self.model_name)
+    
     def __str__(self):
         return f"{self.color} {self.make} {self.model_name}"
 

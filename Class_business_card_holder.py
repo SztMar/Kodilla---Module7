@@ -1,14 +1,14 @@
 class Business_card_holder():
    
     
-    def __init__(self,name, surname,company_name,job_position,email_adress):
+    def __init__(self,name, surname,company,job_position,email_adress):
         self.name = name
         self.surname = surname
-        self.company_name = company_name
+        self.company = company
         self.job_position = job_position
         self.email_adress = email_adress
 
-        print(name, surname, email_adress)
+        print(name, surname, company, email_adress)
    
 contact_list = [["John","Paul","Nordea","IT developer","john.paul@nordea.com"],
 ["Dante","Swenson","EY","Senior Business Analyst","dante.swenson@e&y.com"],
@@ -19,6 +19,8 @@ contact_list = [["John","Paul","Nordea","IT developer","john.paul@nordea.com"],
 
 for contact in contact_list:
     new_contact = Business_card_holder(contact[0], contact[1], contact[2], contact[3], contact[4])
+
+
     
 
 

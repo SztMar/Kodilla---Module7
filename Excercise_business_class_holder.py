@@ -1,8 +1,6 @@
 from faker import Faker
 fake = Faker()
-class BusinessCardHolder():
-   
-    
+class BusinessCardHolder():   
     def __init__(self,name, surname,company_name,job_position,email_adress):
         self.name = name
         self.surname = surname
@@ -55,6 +53,7 @@ class BusinessContact(BaseContact):
 contact_card = BusinessContact(name = fake.first_name(), surname = fake.last_name(), private_number = fake.country_calling_code() + " " + fake.phone_number(),email_adress = fake.company_email(), job_position = fake.job(),company_name = fake.company(),work_number = fake.country_calling_code() + " " + fake.phone_number())
 print(contact_card.contact())
 print(contact_card.create_contacts)
+print(contact_card.__str__())
 
 contact_card = BaseContact(name = fake.first_name(), surname = fake.last_name(), private_number = fake.country_calling_code() + " " + fake.phone_number(),email_adress = fake.company_email())
 print(contact_card.contact())
